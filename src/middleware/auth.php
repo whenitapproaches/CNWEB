@@ -10,6 +10,8 @@
   $sql = "SELECT * FROM users WHERE token='$token'";
   $users = mysqli_query($link, $sql);
 
-  if(count($users) === 0 || !$users) {header("Location:$unauthorizedURL"); exit();};
+  $row = mysqli_fetch_array($users);
+
+  if(count($row) === 0) {header("Location:$unauthorizedURL"); exit();};
 
 ?>
