@@ -3,7 +3,7 @@
   $result=mysqli_query($link,$sql);
 ?>
 
-<button href="<?php echo $base_url . 'logic/employees_delete_all.php'; ?>">Xoa tat ca</button>
+<a href="<?php echo $base_url . 'logic/employees_delete_all.php'; ?>">Xoa tat ca</a>
 
 <form action="<?php echo $base_url . 'logic/employees_search.php'; ?>" method="GET">
   <input name="search" type="text">

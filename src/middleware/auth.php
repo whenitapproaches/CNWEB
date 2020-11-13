@@ -7,9 +7,9 @@
 
   $token = $_COOKIE['token'];
 
-  $sql = "SELECT users WHERE token='$token'";
-  $user = mysqli_query($link, $sql);
+  $sql = "SELECT * FROM users WHERE token='$token'";
+  $users = mysqli_query($link, $sql);
 
-  if(!$user) {header("Location:$unauthorizedURL"); exit();};
+  if(count($users) === 0 || !$users) {header("Location:$unauthorizedURL"); exit();};
 
 ?>
