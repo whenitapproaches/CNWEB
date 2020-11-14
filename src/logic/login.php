@@ -18,11 +18,12 @@
 
   $loginURL = $base_url . 'login.php';
 
-  if(count($row) === 0) header("Location:$loginURL");
+  if(!$row || count($row) === 0) {header("Location:$loginURL"); exit();}
 
   $token = sha1(mt_rand(1, 90000) . 'CNWEB');
 
   setcookie('token', $token, time()+60*60*24*30, '/');
+  setcookie('username', $username, time()+60*60*24*30, '/');
 
   $sql= "UPDATE users SET token='$token' WHERE username='$username'";
   $result = mysqli_query($link, $sql);

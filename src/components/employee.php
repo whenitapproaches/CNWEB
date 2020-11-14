@@ -1,6 +1,7 @@
 <?php
   $employeeID = $_GET['id'];
-  $sql= "select * from employees where id='$employeeID'";
+  $name = $_GET['name'];
+  $sql= "select * from employees where id='$employeeID' or name='$name'";
   $result=mysqli_query($link,$sql);
 ?>
 

@@ -3,12 +3,17 @@
   $result=mysqli_query($link,$sql);
 ?>
 
-<a href="<?php echo $base_url . 'logic/employees_delete_all.php'; ?>">Xoa tat ca</a>
+<a class="button is-danger" href="<?php echo $base_url . 'logic/employees_delete_all.php'; ?>">Xoa tat ca</a>
 
-<form action="<?php echo $base_url . 'logic/employees_search.php'; ?>" method="GET">
-  <input name="search" type="text">
-  <button type="submit">Submit</button>
-</form>
+<div class="employees-search-form">
+  <form action="<?php echo $base_url . 'logic/employees_search.php'; ?>" method="GET">
+    <div class="form-group">
+      <label>Tim kiem:</label>
+      <input name="search" type="text" placeholder="Nhap id nguoi dung hoac ho va ten...">
+    </div>
+    <button class="button is-primary" type="submit">Tim</button>
+  </form>
+</div>
 
 <div class="employees-table">
   <table>

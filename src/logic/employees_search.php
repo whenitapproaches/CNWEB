@@ -17,7 +17,7 @@
 
   if(count($row) === 0) return header("Location:$notFoundURL");
 
-  $employeeURL = $base_url . "employee.php?id=$row[0]";
+  $employeeURL = $base_url . "employee.php?id=$row[0]&name=$row[1]";
 
   return header("Location:$employeeURL")
 

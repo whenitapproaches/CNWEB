@@ -6,6 +6,7 @@
 
 ?>
 
+<div class="form">
 <h1>Modify an employee</h1>
 
 <form action="<?php echo $base_url . 'logic/employees_modify.php'; ?>" method="POST">
@@ -25,5 +26,6 @@
     <label for="room_id">Room ID</label>
     <input name="room_id" type="text" value="<?php echo $room_id; ?>" class="">
   </div>
-  <button type="submit">Submit</button>
+  <button class="button is-primary"  type="submit">Submit</button>
 </form>
+</div>

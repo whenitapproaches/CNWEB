@@ -2,6 +2,7 @@
 <?php require "./templates/body_before.php"; ?>
 
       <div class="">
+            trang home
       </div>
 
       

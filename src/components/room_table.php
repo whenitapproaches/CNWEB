@@ -26,7 +26,7 @@
           $address=$row{'address'};
           $edit_url = $base_url . "employees_modify.php?id=$id&name=$name&address=$address&room_id=$room_id";
           $remove_url = $base_url . "logic/employees_delete.php?id=$id";
-          echo "<tr><td align='center'>$id</td><td colspan='5'>$name</td><td align='right'>$address</td><td align='center'>$room_id</td><td><a href='$edit_url'>Modify</a></td><td><a href='$remove_url'>Remove</a></td></tr>";
+          echo "<tr><td align='center'>$id</td><td colspan='5'>$name</td><td align='right'>$address</td><td align='center'>$room_id</td><td><a class='button is-info' href='$edit_url'>Modify</a></td><td><a class='button is-danger' href='$remove_url'>Remove</a></td></tr>";
         }
       ?>
     </tbody>

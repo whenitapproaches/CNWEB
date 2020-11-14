@@ -1,8 +1,11 @@
 :root {
   --black-color: #3C3C3C;
   --white-color: #F5F5F5;
-  --primary-color: #FF5A5F;
-  --secondary-color: #087E8B;
+  --primary-color: #44BBA4;
+  --success-color: #4FB477;
+  --info-color: #00A5CF;
+  --warning-color: #E6AF2E;
+  --danger-color: #F93943;
 }
 
 html {
@@ -126,4 +129,60 @@ html {
 }
 .dropdown .item:last-child {
   padding-bottom: 0;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button.is-info {
+  background-color: var(--info-color);
+}
+
+.button.is-primary {
+  background-color: var(--primary-color);
+}
+
+.button.is-danger {
+  background-color: var(--danger-color);
+}
+
+.employees-search-form {
+  padding: 2rem 0;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+
+.form-group {
+
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.form-group input {
+  margin-bottom: 0.75rem;
+  display: flex;
+}
+
+.form {
+  padding: 2.5rem 0;
+}
+
+.form h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
